@@ -18,6 +18,6 @@ class InfoController extends Controller
         ];
         // Convert array menjadi DTO
         $result = InfoData::from($params);
-        return response()->json($result);
+        return response()->json($result->toArray());
     }
 }

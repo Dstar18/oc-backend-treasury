@@ -8,13 +8,5 @@ services:
     ports:
       - "8041:8041"
     volumes:
-      - ./.env:/var/www/project/.env
       - ./storage:/var/www/project/storage
       - ./bootstrap/cache:/var/www/project/bootstrap/cache
-      - .:/var/www/project
-    networks:
-      - kong-net
-
-networks:
-  kong-net:
-    external: true
